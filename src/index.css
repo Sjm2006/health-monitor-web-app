@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design Tokens ───────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    /* Backgrounds */
+    --background: 40 30% 97%;
+    --foreground: 220 25% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 8%;
+
+    /* Teal-green primary (health/nature) */
+    --primary: 174 62% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Warm amber secondary (warmth/community) */
+    --secondary: 34 90% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 174 40% 92%;
+    --accent-foreground: 174 62% 25%;
+
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 174 62% 32%;
+
+    --radius: 0.625rem;
+
+    /* Semantic colors */
+    --warning: 43 96% 52%;
+    --warning-foreground: 30 60% 10%;
+    --danger: 0 80% 55%;
+    --danger-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 40 20% 92%;
+    --card: 220 20% 11%;
+    --card-foreground: 40 20% 92%;
+    --popover: 220 20% 11%;
+    --popover-foreground: 40 20% 92%;
+    --primary: 174 55% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 34 85% 55%;
+    --secondary-foreground: 30 60% 10%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 174 30% 18%;
+    --accent-foreground: 174 55% 70%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 174 55% 45%;
+    --warning: 43 90% 52%;
+    --warning-foreground: 30 60% 10%;
+    --danger: 0 70% 55%;
+    --danger-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+/* ── Utility classes ─────────────────────────────────────────── */
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(174 62% 32%), hsl(174 62% 45%));
+  }
+  .gradient-health {
+    background: linear-gradient(135deg, hsl(34 90% 50%), hsl(43 96% 58%));
+  }
+  .gradient-hero {
+    background: linear-gradient(
+      160deg,
+      hsl(174 62% 16%) 0%,
+      hsl(174 50% 25%) 50%,
+      hsl(34 60% 30%) 100%
+    );
+  }
+  .gradient-danger {
+    background: linear-gradient(135deg, hsl(0 80% 55%), hsl(0 70% 65%));
+  }
+
+  .shadow-card {
+    box-shadow: 0 1px 3px hsl(220 25% 8% / 0.06),
+                0 4px 12px hsl(220 25% 8% / 0.06);
+  }
+  .shadow-elevated {
+    box-shadow: 0 4px 24px hsl(220 25% 8% / 0.10),
+                0 1px 4px hsl(220 25% 8% / 0.06);
+  }
+
+  /* Staggered animation delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  /* Smooth hover lift */
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(220 25% 8% / 0.12);
+  }
+}
