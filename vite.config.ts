@@ -4,6 +4,10 @@ import path from "path";
 
 export default defineConfig({
   base: '/health-monitor-web-app/',
+  server: {
+    host: "::",
+    port: 8080,
+  },
   plugins: [react()],
   resolve: {
     alias: {
