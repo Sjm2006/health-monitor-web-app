@@ -171,9 +171,6 @@ const Homepage = ({ onNavigate }: HomepageProps) => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-10">
             <h2 className="font-display text-3xl md:text-4xl mb-2">What do you need?</h2>
-            <p className="text-muted-foreground">
-              Tools to assess, monitor, and report community health across Northeast India.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -235,6 +232,24 @@ const Homepage = ({ onNavigate }: HomepageProps) => {
           </div>
         </div>
       </section>
+
+      {/* ── Footer ── */}
+      <footer className="border-t border-border bg-card">
+        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md gradient-primary flex items-center justify-center">
+              <Droplets className="w-3.5 h-3.5 text-white" />
+            </div>
+            <span className="font-display text-sm font-medium">HealthWatch NE</span>
+          </div>
+          <p className="text-xs text-muted-foreground text-center">
+            © {new Date().getFullYear()} HealthWatch NE. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Designed & Developed by <span className="font-semibold text-primary">SJM</span>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

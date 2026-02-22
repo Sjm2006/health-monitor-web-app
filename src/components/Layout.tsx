@@ -43,6 +43,24 @@ const Layout = ({ onBack, children, title }: LayoutProps) => (
         <span>Emergency: Ambulance <strong className="text-foreground">108</strong> · Medical <strong className="text-foreground">102</strong></span>
       </div>
     </div>
+
+    {/* Footer */}
+    <footer className="border-t border-border bg-card">
+      <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-md gradient-primary flex items-center justify-center">
+            <Droplets className="w-3.5 h-3.5 text-white" />
+          </div>
+          <span className="font-display text-sm font-medium">HealthWatch NE</span>
+        </div>
+        <p className="text-xs text-muted-foreground text-center">
+          © {new Date().getFullYear()} HealthWatch NE. All rights reserved.
+        </p>
+        <p className="text-xs text-muted-foreground">
+          Designed & Developed by <span className="font-semibold text-primary">SJM</span>
+        </p>
+      </div>
+    </footer>
   </div>
 );
 
