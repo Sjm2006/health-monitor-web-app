@@ -3,6 +3,8 @@
 
 > 🏆 **Built for Inter College Smart India Hackathon (SIH)**
 
+> 🌐 **Live Demo:** [https://sjm2006.github.io/health-monitor-web-app/](https://sjm2006.github.io/health-monitor-web-app/)
+
 ---
 
 ## 📝 Description
@@ -303,7 +305,7 @@ This single HTML file contains the complete app with all features, charts, bilin
 
 ## 👥 Team
 
-Built for the **Inter College Smart India Hackathon (SIH) 2025**
+Built for the **Inter College Smart India Hackathon (SIH)**
 
 
 
